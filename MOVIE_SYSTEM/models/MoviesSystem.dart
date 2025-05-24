@@ -8,10 +8,19 @@ class Moviessystem {
   List <Actor> _actors = [];
 
   void AddActor(Actor actor) {
+    if (_actors.any((a) => a.name == actor.name)) {
+      print("Actor already exists: ${actor.name}");
+      return;
+    }
     _actors.add(actor);
     print("Actor added: ${actor.name}");
   }
   void AddMovie(Movielist movielist) {
+    if (_movieslist.any((m) => m.Geners == movielist.Geners)) {
+      print("Movie Gener already exists: ${movielist.Geners}");
+      return;
+    }
+    
     _movieslist.add(movielist);
     print("Movie Gener added: ${movielist.Geners}");
   }

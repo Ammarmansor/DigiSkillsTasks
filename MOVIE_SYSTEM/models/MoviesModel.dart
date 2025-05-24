@@ -9,7 +9,8 @@ class Movies {
   Movies(
       {required this.actor,
       required this.title,
-      required this.overview,
-      required this.releaseDate,
-      required this.voteAverage});
+       this.overview,
+       this.releaseDate,
+       this.voteAverage});
+
 }
